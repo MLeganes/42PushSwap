@@ -4,6 +4,9 @@ This project will make you sort data on a stack, with a limited set of instructi
 
 ## To do list
 
+- [ ] 	create_new_ele
+- [ ] 	add_new_element_list
+
 - [ ] 	operation_swap
 - [ ] 	operation_rotate
 - [ ] 	operation_rev_rotate
@@ -15,3 +18,15 @@ This project will make you sort data on a stack, with a limited set of instructi
 	
 - [ ]   Check readme
 
+## Architech
+
+1. read argv --
+
+
+
+## Visualizer
+
+https://github.com/o-reo/push_swap_visualizer
+move <pyviz.py> to main folder
+	
+	python3 pyviz.py `ruby -e "puts (-0..100).to_a.shuffle.join(' ')"`

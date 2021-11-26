@@ -11,11 +11,13 @@ void get_argv(t_push_swap *ps, int args, char **argv)
 
 	nbrptr = &nbr; 
 	
+	ps->input_argv = &argv[1];
 	if (args < 2)
 		error_print_exit("Invalid input arguments.");
 	if (args == 2)
 	{
-		// check string				
+		ft_printf("2 args %s \n", argv[1]);
+		// check string			
 		ps->size = 0;
 	}
 	else
@@ -39,10 +41,10 @@ void get_argv(t_push_swap *ps, int args, char **argv)
 	}
 }
 
-// static int	check_input_array_argv()
+// static int	parse_str()
 // {
 // }
 
-// static int	check_input_str_argv()
+// static int	parse_array()
 // {
 // }

@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/11/26 15:43:27 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/11/26 17:41:02 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ typedef struct s_push_swap
 	int		size_a;
 	int		size_b;
 	int		size;
-	char	**input;
+	char	**input_argv;
 	
 } t_push_swap;
 

@@ -6,15 +6,18 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/11/25 13:36:15 by amorcill         ###   ########.fr        #
+#    Updated: 2021/11/26 15:41:57 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
 CC		= gcc
-FLAGS	= -Wall -Wextra -Werror
+FLAGS	= -Wall -Wextra -Werror -g -fsanitize=address
 OBJS	= $(patsubst %.c, %.o, $(SRCS))
-SRCS	= push_swap.c \
+SRCS	=	push_swap.c \
+			check_input.c \
+			stack.c \
+			error.c \
 
  
 %.o: %.c
@@ -23,7 +26,7 @@ SRCS	= push_swap.c \
 all: $(NAME)
 
 $(NAME): libft/libft.a $(OBJS)
-	$(CC) -Llibft -lft -o $(NAME) $(OBJS)
+	$(CC) $(FLAGS) -Llibft -lft -o $(NAME) $(OBJS)
 
 clean:
 	rm -f *.o

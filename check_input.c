@@ -4,47 +4,63 @@
 
 void get_argv(t_push_swap *ps, int args, char **argv)
 {
-	int i;
-	int *nbrptr;
-	int nbr;
-	int ret;
-
-	nbrptr = &nbr; 
-	
-	ps->input_argv = &argv[1];
+	//ps->input_array = &argv[1];
 	if (args < 2)
 		error_print_exit("Invalid input arguments.");
 	if (args == 2)
-	{
-		ft_printf("2 args %s \n", argv[1]);
-		// check string			
-		ps->size = 0;
+	{		
+		ft_printf("[debugger] 2 args %s \n", argv[1]);
+		ps_strtoarray(ps, argv[1]);
+		ps->array_start = 0;
+		ps_create_stack_a(ps);
 	}
-	else
+	else if (args > 2)
 	{
-		//check array isdigits
-		ps->size = 0;
+		//there is an array!
+		ft_printf("[debugger] more than 2 args %s \n", argv[1]);
+		ps->array_size = args -1;
+		ps->input_array = &argv[1];
+		ps->array_start = 1;
+		ps_create_stack_a(ps);		
 	}	
-	i = 1;
-	while(argv[i])
-	{
-		//check argument		
-		//create t_struct
-		// Add in stack-a
+	
+}
 
-		ret = ft_strtoi(argv[i], nbrptr);
+void ps_create_stack_a(t_push_swap *ps)
+{
+	int i;
+	int ret;
+	int *nbrptr;
+	int nbr;
+
+	nbrptr = &nbr;
+	i = 0;
+	while(ps->input_array[i])
+	{
+		ret = ft_strtoi(ps->input_array[i], nbrptr);
 		if ( ret == 0)
 		{
-			ft_printf("argv strtoi ret: %d value: %d\n", ret, *nbrptr);
+			ft_printf("argv ft_strtoi ret: %d value: %d\n", ret, *nbrptr);
+		}
+		else
+		{
+			error_print_exit("Invalid input arguments.");
 		}
 		i++;
 	}
+
 }
 
-// static int	parse_str()
-// {
-// }
+void	ps_strtoarray(t_push_swap *ps, char *str)
+{
+	int		i;
 
-// static int	parse_array()
-// {
-// }
+	ps->input_array = ft_split(str, ' ');
+	if (!ps->input_array)
+		error_print_exit("Error reading string argv");
+	i = 0;
+	while (ps->input_array[i] != NULL)
+		i++;
+	ps->array_size = i;	
+	return ;
+}

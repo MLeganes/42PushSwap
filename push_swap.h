@@ -6,13 +6,12 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/11/26 17:41:02 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/11/29 12:27:42 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# endif
 
 /* ************************************************************************** */
 /* STD LIBC INCLUDES														  */
@@ -41,14 +40,23 @@ typedef struct s_stack
 	struct s_stack *prev;
 } t_stack;
 
+typedef struct s_data
+{
+	int		id;
+	int		nbr;
+	struct s_stack *next;
+	struct s_stack *prev;
+} t_data;
+
 typedef struct s_push_swap
 {
-	t_stack *stack_a;
-	t_stack *stack_b;
+	t_data *stack_a;
+	t_data *stack_b;
 	int		size_a;
 	int		size_b;
-	int		size;
-	char	**input_argv;
+	char	**input_array;
+	int		array_size;
+	int		array_start;
 	
 } t_push_swap;
 
@@ -63,10 +71,16 @@ typedef struct s_push_swap
 
 
 /*
+ * PUSH SWAP UTILS
+ */
+
+/*
  * CHECK INPUT
  */
 
-void get_argv(t_push_swap *ps, int argc, char **argv);
+void	get_argv(t_push_swap *ps, int argc, char **argv);
+void	ps_strtoarray(t_push_swap *ps, char *str);
+void	ps_create_stack_a(t_push_swap *ps);
 
 /*
  * STACK
@@ -77,3 +91,5 @@ void stack_init(t_push_swap *ps);
  * ERROR
  */
 void	error_print_exit(char *error_msg);
+
+# endif

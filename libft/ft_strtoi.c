@@ -6,14 +6,11 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 12:38:51 by amorcill          #+#    #+#             */
-/*   Updated: 2021/11/26 15:15:20 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/11/29 19:17:00 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_isspace(char c);
-static int	ft_sign(char c);
 
 static int	ft_isspace(char c)
 {
@@ -23,51 +20,40 @@ static int	ft_isspace(char c)
 	return (0);
 }
 
-static int	ft_sign(char c)
-{
-	if (c == '-')
-		return (-1);
-	return (1);
-}
-
 /* 
  * DESCRIPTION
  * The ft_strtoi() function converts the string in str to a int value.
  * The string may begin with an arbitrary amount of white space (as 
  * determined by ft_isspace) followed by a single optional `+' or `-' 
- * sign.  If base is taken as 10 (decimal) by default.
+ * sign. Base is taken as 10 (decimal) by default.
  * 
  * RETURN VALUES
  * The ft_strtoi() function return the result of the conversion:
- * 0 the conversion was successful.
- * -1 is returned, if no conversion could be performed.
+ * 1 the conversion was successful.
+ * 0 is returned, if no conversion could be performed.
  */
-int	ft_strtoi(const char *str, int *nbr)
+int	ft_strtoi(char *str, int *nbr)
 {
 	unsigned int	result;
 	int				sign;
-	int				temp;
+	int				i;
 
 	sign = 1;
 	result = 0;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '+' || *str == '-')
+	i = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	while (str[i] != '\0')
 	{
-		sign = ft_sign(*str);
-		str++;
-	}
-	while (ft_isdigit(*str) && *str != '\0' && result < 2147483648)
-	{
-		result = (result * 10) + (*str - '0');
-		str++;
-	}
-	if ((sign == -1 && result <= 2147483648)
-		|| (sign == 1 && result <= 2147483647))
-	{
-		temp = (sign * (int)result);		
-		*nbr = temp;
-		return (0);
-	}
-	return (-1);
+		if (!ft_isdigit(str[i]) && str[i] != '-' && str[i] != '+')
+			return (0);
+		if (str[i] == '+' || str[i] == '-')
+		{
+			if (!ft_isdigit(str[i + 1]))
+				return (0);
+		}
+		i++;
+	}	
+	*nbr = ft_atoi(str);
+	return (1);
 }

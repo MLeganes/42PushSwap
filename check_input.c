@@ -33,22 +33,19 @@ void ps_create_stack_a(t_push_swap *ps)
 	int *nbrptr;
 	int nbr;
 
+	nbr = 0;
 	nbrptr = &nbr;
+	ret = 0;
 	i = 0;
 	while(ps->input_array[i])
 	{
 		ret = ft_strtoi(ps->input_array[i], nbrptr);
-		if ( ret == 0)
-		{
+		if (ret == 1)
 			ft_printf("argv ft_strtoi ret: %d value: %d\n", ret, *nbrptr);
-		}
 		else
-		{
 			error_print_exit("Invalid input arguments.");
-		}
 		i++;
 	}
-
 }
 
 void	ps_strtoarray(t_push_swap *ps, char *str)
@@ -62,5 +59,6 @@ void	ps_strtoarray(t_push_swap *ps, char *str)
 	while (ps->input_array[i] != NULL)
 		i++;
 	ps->array_size = i;	
+	ft_printf("argv nubers: %d \n", i);
 	return ;
 }

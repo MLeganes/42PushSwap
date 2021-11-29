@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/11/29 12:27:42 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/11/29 13:07:19 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ typedef struct s_data
 
 typedef struct s_push_swap
 {
-	t_data *stack_a;
+	t_data *stack_a;			// Pointer to first element , stack a.
 	t_data *stack_b;
 	int		size_a;
 	int		size_b;

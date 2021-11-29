@@ -9,7 +9,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${fileDirname}/${fileBasenameNoExtension}",
-			"args": [18 2dfg 33],
+			"args": ["-18 -65 33 968"],
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",
 			"environment": [],

@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/11/29 13:07:19 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/11/29 21:00:41 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@
 /* ************************************************************************** */
 /* STRUCT DEFS															  	  */
 /* ************************************************************************** */
+
+
 typedef struct s_stack
 {
 	int		id;
@@ -40,18 +42,10 @@ typedef struct s_stack
 	struct s_stack *prev;
 } t_stack;
 
-typedef struct s_data
-{
-	int		id;
-	int		nbr;
-	struct s_stack *next;
-	struct s_stack *prev;
-} t_data;
-
 typedef struct s_push_swap
 {
-	t_data *stack_a;			// Pointer to first element , stack a.
-	t_data *stack_b;
+	t_stack *stack_a;			// Pointer to first element , stack a.
+	t_stack *stack_b;
 	int		size_a;
 	int		size_b;
 	char	**input_array;
@@ -66,8 +60,9 @@ typedef struct s_push_swap
 /* ************************************************************************** */
 
 /*
- * PUSH SWAP
+ * PUSH SWAP INIT
  */
+t_push_swap *push_swap_init(void);
 
 
 /*
@@ -77,7 +72,6 @@ typedef struct s_push_swap
 /*
  * CHECK INPUT
  */
-
 void	get_argv(t_push_swap *ps, int argc, char **argv);
 void	ps_strtoarray(t_push_swap *ps, char *str);
 void	ps_create_stack_a(t_push_swap *ps);
@@ -85,8 +79,9 @@ void	ps_create_stack_a(t_push_swap *ps);
 /*
  * STACK
  */
-void stack_init(t_push_swap *ps);
-
+t_stack	*ps_stack_new(int *nbrptr);
+void	ps_stack_add(t_push_swap *ps, int *nbrptr);
+void	ps_create_stack_a(t_push_swap *ps);
 /*
  * ERROR
  */

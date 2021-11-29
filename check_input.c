@@ -1,56 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_input.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/29 19:23:35 by amorcill          #+#    #+#             */
+/*   Updated: 2021/11/29 20:59:58 by amorcill         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-
-
-void get_argv(t_push_swap *ps, int args, char **argv)
+void	get_argv(t_push_swap *ps, int args, char **argv)
 {
-	//ps->input_array = &argv[1];
 	if (args < 2)
 		error_print_exit("Invalid input arguments.");
 	if (args == 2)
-	{		
+	{
 		ft_printf("[debugger] 2 args %s \n", argv[1]);
 		ps_strtoarray(ps, argv[1]);
-		ps->array_start = 0;
+		ps->array_start = 0;	
 		ps_create_stack_a(ps);
 	}
 	else if (args > 2)
 	{
-		//there is an array!
 		ft_printf("[debugger] more than 2 args %s \n", argv[1]);
-		ps->array_size = args -1;
+		ps->array_size = args - 1;
 		ps->input_array = &argv[1];
 		ps->array_start = 1;
-		ps_create_stack_a(ps);		
-	}	
-	
-}
-
-void ps_create_stack_a(t_push_swap *ps)
-{
-	int i;
-	int ret;
-	int *nbrptr;
-	int nbr;
-
-	nbr = 0;
-	nbrptr = &nbr;
-	ret = 0;
-	i = 0;
-	while(ps->input_array[i])
-	{
-		ret = ft_strtoi(ps->input_array[i], nbrptr);
-		if (ret == 1)
-			ft_printf("argv ft_strtoi ret: %d value: %d\n", ret, *nbrptr);
-		else
-			error_print_exit("Invalid input arguments.");
-		i++;
+		ps_create_stack_a(ps);
 	}
 }
 
 void	ps_strtoarray(t_push_swap *ps, char *str)
 {
-	int		i;
+	int	i;
 
 	ps->input_array = ft_split(str, ' ');
 	if (!ps->input_array)
@@ -58,7 +43,7 @@ void	ps_strtoarray(t_push_swap *ps, char *str)
 	i = 0;
 	while (ps->input_array[i] != NULL)
 		i++;
-	ps->array_size = i;	
+	ps->array_size = i;
 	ft_printf("argv nubers: %d \n", i);
 	return ;
 }

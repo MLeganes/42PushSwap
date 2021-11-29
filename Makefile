@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/11/26 15:41:57 by amorcill         ###   ########.fr        #
+#    Updated: 2021/11/29 21:04:27 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ CC		= gcc
 FLAGS	= -Wall -Wextra -Werror -g -fsanitize=address
 OBJS	= $(patsubst %.c, %.o, $(SRCS))
 SRCS	=	push_swap.c \
+			push_swap_init.c \
 			check_input.c \
 			stack.c \
 			error.c \

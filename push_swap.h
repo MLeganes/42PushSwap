@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/01 13:09:30 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/01 19:54:34 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,17 +63,13 @@ typedef struct s_push_swap
  * PUSH SWAP INIT
  */
 t_push_swap *push_swap_init(void);
-
+void	get_argv(t_push_swap *ps, int argc, char **argv);
+void	ps_strtoarray(t_push_swap *ps, char *str);
 
 /*
  * PUSH SWAP UTILS
  */
 
-/*
- * CHECK INPUT
- */
-void	get_argv(t_push_swap *ps, int argc, char **argv);
-void	ps_strtoarray(t_push_swap *ps, char *str);
 
 /*
  * STACK

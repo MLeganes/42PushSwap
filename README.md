@@ -4,17 +4,22 @@ This project will make you sort data on a stack, with a limited set of instructi
 
 ## To do list
 
-- [ ] 	create_new_ele
-- [ ] 	add_new_element_list
+- [ ] 	stack_new
+- [ ] 	stack_add
+- [ ] 	stack_init
+- [ ] 	stack_last
+- [ ] 	stack_delete
+- [ ] 	stack_len
+- [ ] 	create_stack_a
 
 - [ ] 	operation_swap
 - [ ] 	operation_rotate
 - [ ] 	operation_rev_rotate
 - [ ] 	operation_push
 
-- [ ] 	shorting_three
-- [ ] 	shorting_five
-- [ ] 	shorting_more
+- [ ] 	algorithm_small
+- [ ] 	algorithm_medium
+- [ ] 	algorithm_large
 	
 - [ ]   Check readme
 

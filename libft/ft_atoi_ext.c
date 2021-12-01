@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 17:27:49 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/01 18:42:53 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/01 20:06:31 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ft_atoi_ext(const char *str, int *nbr)
 		sign = ft_sign(str[i]);
 		i++;
 	}
-	while (str[i] != '\0')
+	while (str[i] != '\0' && result <= 2147483648)
 	{
 		if (!ft_isdigit(str[i]))
 			return (0);

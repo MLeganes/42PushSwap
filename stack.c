@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:47:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/11/29 21:03:50 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/11/29 22:55:31 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,13 @@ t_stack	*ps_stack_new(int *nbrptr)
 	return (data);
 }
 
-void	ps_stack_add(t_push_swap *ps, int *nbrptr)
+void	ps_stack_add(t_push_swap *ps, t_stack *node)
 {	
 	if ( ps->stack_a == NULL)
 	{
-		ft_printf("%d", *nbrptr);		
+		ps->stack_a = node;
 	}
+	
 }
 
 void	ps_create_stack_a(t_push_swap *ps)
@@ -38,7 +39,8 @@ void	ps_create_stack_a(t_push_swap *ps)
 	int	i;
 	int	*nbrptr;
 	int	nbr;
-
+	t_stack *node,
+	
 	nbr = 0;
 	nbrptr = &nbr;
 	i = 0;
@@ -46,11 +48,16 @@ void	ps_create_stack_a(t_push_swap *ps)
 	{
 		if (ft_strtoi(ps->input_array[i], nbrptr))
 		{
-			ps_stack_add(ps, nbrptr);
+			node = ps_stack_new(nbrptr);
+			if (node == NULL)
+			{
+				// putadata!
+			}
+			ps_stack_add(ps, node);
 			ft_printf("argv ft_strtoi value: %d\n", *nbrptr);
 		}
 		else
-			error_print_exit("Invalid input arguments.");
+			error_print_exit("Invalid arguments in input params.");
 		i++;
 	}
 }

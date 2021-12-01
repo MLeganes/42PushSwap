@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 19:23:35 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/01 16:14:58 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/01 17:40:45 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,8 @@ void	get_argv(t_push_swap *ps, int args, char **argv)
 
 void	ps_strtoarray(t_push_swap *ps, char *str)
 {
-	int	i;
-
 	ps->input_array = ft_split(str, ' ');
 	if (!ps->input_array)
-		error_print_exit("Error reading string argv");
-	i = 0;
-	while (ps->input_array[i] != NULL)
-		i++;
-	ps->array_size = i;
-	ft_printf("argv nubers: %d \n", i);
+		error_print_exit("Error reading string argv");	
 	return ;
 }

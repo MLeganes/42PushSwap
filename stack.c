@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:47:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/01 16:13:13 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/01 18:50:24 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,8 @@ void	ps_create_stack_a(t_push_swap *ps)
 	i = 0;
 	while (ps->input_array[i])
 	{
-		if (ft_strtoi(ps->input_array[i], nbrptr))
-		{
+		if (ft_atoi_ext(ps->input_array[i], nbrptr))
+		{			
 			new_elemnt = ps_stack_new(nbrptr);
 			if (new_elemnt == NULL)
 				error_print_exit("New stack elem. is NULL.");

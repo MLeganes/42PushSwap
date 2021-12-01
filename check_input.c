@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 19:23:35 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/01 17:40:45 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/01 18:50:53 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ void	ps_strtoarray(t_push_swap *ps, char *str)
 {
 	ps->input_array = ft_split(str, ' ');
 	if (!ps->input_array)
-		error_print_exit("Error reading string argv");	
+		error_print_exit("Error reading string argv");
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/01 19:54:34 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/01 20:26:24 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@
 /* STRUCT DEFS															  	  */
 /* ************************************************************************** */
 
+# define PRINT_OPERATION 1
 
 typedef struct s_stack
 {
@@ -77,6 +78,11 @@ void	ps_strtoarray(t_push_swap *ps, char *str);
 t_stack	*ps_stack_new(int *nbrptr);
 void	ps_stack_add(t_push_swap *ps, t_stack *nbrptr);
 void	ps_create_stack_a(t_push_swap *ps);
+
+/*
+ * PRINT OPERATION
+ */
+void print_operation(char *s);
 
 /*
  * ERROR

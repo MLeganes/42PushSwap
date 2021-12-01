@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/01 19:57:02 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/01 20:25:59 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRCS	=	push_swap.c \
 			push_swap_init.c \
 			operation_swap.c \
 			stack.c \
+			print_operation.c \
 			error.c \
 
  

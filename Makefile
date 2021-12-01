@@ -6,12 +6,12 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/01 20:25:59 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/01 22:23:05 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
-CC		= gcc
+CC		= clang
 FLAGS	= -Wall -Wextra -Werror -g -fsanitize=address 
 OBJS	= $(patsubst %.c, %.o, $(SRCS))
 SRCS	=	push_swap.c \
@@ -28,7 +28,7 @@ SRCS	=	push_swap.c \
 all: $(NAME)
 
 $(NAME): libft/libft.a $(OBJS)
-	$(CC) $(FLAGS) -Llibft -lft -o $(NAME) $(OBJS)
+	$(CC) $(FLAGS) $(OBJS) -Llibft -lft -o $(NAME) 
 
 clean:
 	rm -f *.o

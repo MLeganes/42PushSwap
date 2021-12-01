@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 10:13:27 by amorcill          #+#    #+#             */
-/*   Updated: 2021/11/29 15:05:05 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/01 17:37:20 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <limits.h>
 
 /* ************************************************************************** */
 /* DEFINES																	  */
@@ -56,7 +57,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 int		ft_atoi(const char *str);
-int		ft_strtoi(char *str, int *nbr);
+int		ft_atoi_ext(const char *str, int *nbr);
+//int		ft_strtoi(char *str, int *nbr);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

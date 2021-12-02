@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 15:10:28 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 20:07:17 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 20:08:31 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	stack_a_check_duplication(t_push_swap *ps, t_stack *new_elemnt)
 {
 	int		i;
-	//t_stack	*next;
 	t_stack	*actual;
 
 	if (ps->stack_a == NULL)

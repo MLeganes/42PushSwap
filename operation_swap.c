@@ -6,13 +6,13 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 19:51:23 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 00:42:16 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 18:05:16 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void operation_swap(t_stack *stk)
+static void operation_swap(t_stack *stk)
 {
 	int tmp;
 

@@ -6,30 +6,54 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 10:23:12 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 13:32:41 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 22:19:24 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack *stack_remove_first(t_stack *stk)
+t_stack *stack_a_remove_first(t_push_swap *ps)
 {
 	t_stack *ret;
 	t_stack *next;
 	t_stack *prev;
-	
-	if (stk == NULL)
+
+	if (ps->stack_a == NULL)
 		return (NULL);
-	ret = stk;
-	if (stk->next == NULL && stk->prev == NULL)
-		stk = NULL;
-	else if (stk->next && stk->prev)
+	ret = ps->stack_a;
+	if (ps->stack_a->next == NULL && ps->stack_a->prev == NULL)
+		ps->stack_a = NULL;
+	else if (ps->stack_a->next && ps->stack_a->prev)
 	{
-		next = stk->next;
-		prev = stk->prev;
+		next = ps->stack_a->next;
+		prev = ps->stack_a->prev;
 		prev->next = next;
 		next->prev = prev;	
-		stk = next;		
+		ps->stack_a = next;		
+	}
+	ret->next = NULL;
+	ret->prev = NULL;
+	return (ret);
+}
+
+t_stack *stack_b_remove_first(t_push_swap *ps)
+{
+	t_stack *ret;
+	t_stack *next;
+	t_stack *prev;
+
+	if (ps->stack_b == NULL)
+		return (NULL);
+	ret = ps->stack_b;
+	if (ps->stack_b->next == NULL && ps->stack_b->prev == NULL)
+		ps->stack_b = NULL;
+	else if (ps->stack_b->next && ps->stack_b->prev)
+	{
+		next = ps->stack_b->next;
+		prev = ps->stack_b->prev;
+		prev->next = next;
+		next->prev = prev;	
+		ps->stack_b = next;		
 	}
 	ret->next = NULL;
 	ret->prev = NULL;

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_add_last.c                                   :+:      :+:    :+:   */
+/*   stack_a_add_last.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 15:08:16 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 16:44:33 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 20:42:59 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  */
 void	stack_a_add_last(t_push_swap *ps, t_stack *elemnt)
 {	
-	t_stack	*tmp;
+	t_stack	*prev;
 
 	if (!elemnt)
 		error_print_exit("Element is NULL, nothing to insert instack.");
@@ -35,10 +35,10 @@ void	stack_a_add_last(t_push_swap *ps, t_stack *elemnt)
 	}
 	else
 	{		
+		prev = ps->stack_a->prev;
 		elemnt->next = ps->stack_a;
-		elemnt->prev = ps->stack_a->prev;
-		tmp = ps->stack_a->prev;
-		tmp->next = elemnt;
+		elemnt->prev = prev;
+		prev->next = elemnt;
 		ps->stack_a->prev = elemnt;
 	}
 	ps->size_a++;

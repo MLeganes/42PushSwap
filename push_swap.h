@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 16:57:51 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 22:31:52 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,10 @@ void	get_argv(t_push_swap *ps, int argc, char **argv);
 void	ps_strtoarray(t_push_swap *ps, char *str);
 
 /*
- * PUSH SWAP UTILS
+ * OPERATION PUSH
  */
-
+void operation_pa(t_push_swap *ps); //Testes!
+void operation_pb(t_push_swap *ps); //Testes!
 
 /*
  * OPERATION REV ROTATE
@@ -89,7 +90,6 @@ void	operation_rr(t_push_swap *ps);
 /*
  * OPERATION SWAP
  */
-void	operation_swap(t_stack *stk);
 void	operation_sa(t_push_swap *ps);
 void	operation_sb(t_push_swap *ps);
 void	operation_ss(t_push_swap *ps);
@@ -100,15 +100,17 @@ void	operation_ss(t_push_swap *ps);
 void	stack_a_add_last(t_push_swap *ps, t_stack *elemnt);
 int		stack_a_check_duplication(t_push_swap *ps, t_stack *new_elemnt);
 void	stack_a_create(t_push_swap *ps);
-t_stack	*stack_new(int *nbrptr);
-void	stack_add_first(t_stack *stk, t_stack *new);
-t_stack *stack_remove_first(t_stack *stk);
+void	stack_a_add_first(t_push_swap *ps, t_stack *new); //Testes!
+void	stack_b_add_first(t_push_swap *ps, t_stack *new); //Testes!
+t_stack	*stack_new(int nbr);
+t_stack *stack_a_remove_first(t_push_swap *ps); //Testes!
+t_stack *stack_b_remove_first(t_push_swap *ps); //Testes!
 
 
 /*
  * PRINT OPERATION
  */
-void print_operation(char *s);
+void print_operation(char *s); 
 void print_debugger(char *s);
 
 /*

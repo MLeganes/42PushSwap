@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:47:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/01 19:59:33 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 03:45:45 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_stack	*ps_stack_new(int *nbrptr)
 	return (data);
 }
 
-int	ps_stack_check_duplication(t_push_swap *ps, t_stack *new_elemnt)
+int		ps_stack_check_duplication(t_push_swap *ps, t_stack *new_elemnt)
 {
 	int		i;
 	t_stack	*next;

@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 17:27:49 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/01 20:06:31 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 02:35:18 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,18 @@ static int	ft_sign(char c)
 	return (1);
 }
 
-/* 
- * DESCRIPTION
- * The ft_strtoi() function converts the string in str to a int value.
- * The string may begin with an arbitrary amount of white space (as 
- * determined by ft_isspace) followed by a single optional `+' or `-' 
- * sign. Base is taken as 10 (decimal) by default.
+/**
+ * @brief	The ft_strtoi() function converts the string in str to a int value.
+ * 			The string may begin with an arbitrary amount of white space (as 
+ * 			determined by ft_isspace) followed by a single optional `+' or `-' 
+ * 			sign. Base is taken as 10 (decimal) by default.
  * 
- * RETURN VALUES
- * The ft_strtoi() function return the result of the conversion:
- * 1 the conversion was successful.
- * 0 is returned, if no conversion could be performed.
+ * @param str The sting with the number.
+ * @param nbr Pointer to return the integer number.
+ * @return int The ft_strtoi() function return the result of the conversion:
+ * 	1 the conversion was successful.
+ * 	0 is returned, if no conversion could be performed.
  */
-
 int	ft_atoi_ext(const char *str, int *nbr)
 {
 	unsigned int	result;

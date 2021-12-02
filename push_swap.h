@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/01 20:26:24 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 01:27:08 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,16 +73,40 @@ void	ps_strtoarray(t_push_swap *ps, char *str);
 
 
 /*
+ * OPERATION REV ROTATE
+ */
+void	operation_rra(t_push_swap *ps);
+void	operation_rrb(t_push_swap *ps);
+void	operation_rrr(t_push_swap *ps);
+
+/*
+ * OPERATION ROTATE
+ */
+void	operation_ra(t_push_swap *ps);
+void	operation_rb(t_push_swap *ps);
+void	operation_rr(t_push_swap *ps);
+
+/*
+ * OPERATION SWAP
+ */
+void	operation_swap(t_stack *stk);
+void	operation_sa(t_push_swap *ps);
+void	operation_sb(t_push_swap *ps);
+void	operation_ss(t_push_swap *ps);
+
+/*
  * STACK
  */
 t_stack	*ps_stack_new(int *nbrptr);
 void	ps_stack_add(t_push_swap *ps, t_stack *nbrptr);
 void	ps_create_stack_a(t_push_swap *ps);
+int		ps_stack_check_duplication(t_push_swap *ps, t_stack *new_elemnt);
 
 /*
  * PRINT OPERATION
  */
 void print_operation(char *s);
+void print_debugger(char *s);
 
 /*
  * ERROR

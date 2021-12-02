@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/01 22:23:05 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/02 01:26:10 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ OBJS	= $(patsubst %.c, %.o, $(SRCS))
 SRCS	=	push_swap.c \
 			push_swap_init.c \
 			operation_swap.c \
+			operation_rotate.c \
+			operation_rev_rotate.c \
 			stack.c \
 			print_operation.c \
 			error.c \

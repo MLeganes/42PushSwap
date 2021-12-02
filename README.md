@@ -4,18 +4,20 @@ This project will make you sort data on a stack, with a limited set of instructi
 
 ## To do list
 
-- [ ] 	stack_new
-- [ ] 	stack_add
-- [ ] 	stack_init
+- [ ]	REVIEW CHECK DUPLICATION
+  
+- [X] 	stack_new
+- [X] 	stack_add
+- [X] 	stack_init
 - [ ] 	stack_last
 - [ ] 	stack_delete
 - [ ] 	stack_len
-- [ ] 	create_stack_a
+- [X] 	create_stack_a
 
-- [ ] 	operation_swap
-- [ ] 	operation_rotate
-- [ ] 	operation_rev_rotate
-- [ ] 	operation_push
+- [X] 	operation_swap
+- [X] 	operation_rotate
+- [x] 	operation_rev_rotate
+- [] 	operation_push
 
 - [ ] 	algorithm_small
 - [ ] 	algorithm_medium

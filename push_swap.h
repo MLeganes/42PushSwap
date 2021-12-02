@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 14:14:36 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 16:57:51 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,13 +97,13 @@ void	operation_ss(t_push_swap *ps);
 /*
  * STACK OPERATION
  */
-t_stack	*ps_stack_new(int *nbrptr);
-void	ps_stack_add(t_push_swap *ps, t_stack *nbrptr);
-void	ps_create_stack_a(t_push_swap *ps);
-int		ps_stack_check_duplication(t_push_swap *ps, t_stack *new_elemnt);
-
+void	stack_a_add_last(t_push_swap *ps, t_stack *elemnt);
+int		stack_a_check_duplication(t_push_swap *ps, t_stack *new_elemnt);
+void	stack_a_create(t_push_swap *ps);
+t_stack	*stack_new(int *nbrptr);
 void	stack_add_first(t_stack *stk, t_stack *new);
 t_stack *stack_remove_first(t_stack *stk);
+
 
 /*
  * PRINT OPERATION

@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:22:04 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/01 19:53:01 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 16:54:51 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ void	get_argv(t_push_swap *ps, int args, char **argv)
 	{
 		ps_strtoarray(ps, argv[1]);
 		ps->array_start = 0;
-		ps_create_stack_a(ps);
+		stack_a_create(ps);
 	}
 	else if (args > 2)
 	{
 		ps->array_size = args - 1;
 		ps->input_array = &argv[1];
 		ps->array_start = 1;
-		ps_create_stack_a(ps);
+		stack_a_create(ps);
 	}
 }
 

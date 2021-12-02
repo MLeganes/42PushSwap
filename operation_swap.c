@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 19:51:23 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 18:05:16 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 22:37:14 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ static void operation_swap(t_stack *stk)
 		tmp = stk->nbr;
 		stk->nbr = stk->next->nbr;
 		stk->next->nbr = tmp;
-		print_debugger("operation swap");
 	}
 }
 

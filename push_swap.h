@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 22:31:52 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 22:37:08 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,8 +110,7 @@ t_stack *stack_b_remove_first(t_push_swap *ps); //Testes!
 /*
  * PRINT OPERATION
  */
-void print_operation(char *s); 
-void print_debugger(char *s);
+void print_operation(char *s);
 
 /*
  * ERROR

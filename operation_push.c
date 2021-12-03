@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 00:42:48 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 22:09:37 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/02 23:55:08 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void operation_pa(t_push_swap *ps)
 	if (tmp)
 		stack_a_add_first(ps, tmp);	
 	print_operation("pa");
+	ps->size_a++;
+	ps->size_b--;
 }
 
 /**
@@ -42,4 +44,6 @@ void operation_pb(t_push_swap *ps)
 	if (tmp)
 		stack_b_add_first(ps, tmp);	
 	print_operation("pb");
+	ps->size_a--;
+	ps->size_b++;
 }

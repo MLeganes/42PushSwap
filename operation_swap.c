@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 19:51:23 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 22:37:14 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/03 01:26:07 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,7 @@ static void operation_swap(t_stack *stk)
 void operation_sa(t_push_swap *ps)
 {
 	if (ps->size_a > 1)
-	{		
 		operation_swap(ps->stack_a);
-		ft_printf("\n element: %d\n", ps->stack_a->nbr);
-		ft_printf("\n element: %d\n", ps->stack_a->next->nbr);
-	}
 	print_operation("sa");
 }
 

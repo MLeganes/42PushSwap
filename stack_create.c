@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:47:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 22:30:58 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/03 01:26:35 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,7 @@ void	stack_a_create(t_push_swap *ps)
 			if (new_elemnt == NULL)
 				error_print_exit("New element is NULL.");
 			if (stack_a_check_duplication(ps, new_elemnt))
-			{				
-				ft_printf("Number add in stack a: %d\n", nbr);	
 				stack_a_add_last(ps, new_elemnt);
-			}
 			else
 				error_print_exit("No duplication input allowed!");
 		}

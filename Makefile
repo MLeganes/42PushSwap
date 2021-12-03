@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/02 21:42:32 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/02 23:42:52 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRCS	=	error.c \
 			stack_new.c \
 			stack_remove_first.c \
 			print_operation.c \
+			stack_print.c \
  
 %.o: %.c
 	$(CC) $(FLAGS) -Ilibft -c $< -o $@

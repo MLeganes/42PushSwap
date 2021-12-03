@@ -6,13 +6,13 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 20:17:17 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/02 22:36:18 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/03 01:35:48 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void print_operation(char *s)
+void	print_operation(char *s)
 {	
 	if (s == 0)
 		return ;

@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_print.c                                      :+:      :+:    :+:   */
+/*   stack_limits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 23:38:25 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/13 10:09:25 by amorcill         ###   ########.fr       */
+/*   Created: 2021/12/14 11:56:56 by amorcill          #+#    #+#             */
+/*   Updated: 2021/12/14 11:59:10 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	stack_print(t_stack *tsk, int size)
+int stack_biggest(t_stack stk)
 {
-	int	i;
+	//find biggest number
+	return 0;
+}
 
-	//ft_printf("\n");
-	i = 0;
-	while (i < size)
-	{
-		ft_printf("%d\n", tsk->nbr);
-		tsk = tsk->next;
-		i++;
-	}
-	write(1, "---\n", 4);
+int stack_smallest(t_stack stk)
+{
+	// find smallest
+
+	return 0;
 }

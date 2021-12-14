@@ -4,12 +4,16 @@ This project will make you sort data on a stack, with a limited set of instructi
 
 ## To do list
   
+- [ ] 	SEGV when the input is "2"
+- [ ] 	problems with input 0
+  
+- [ ] 	stack_min
+- [ ] 	stack_max
+- [ ] 	stack_issorted
+- [ ] 	stack_delete
 - [X] 	stack_new
 - [X] 	stack_add
 - [X] 	stack_init
-- [ ] 	stack_last
-- [ ] 	stack_delete
-- [ ] 	stack_len
 - [X] 	create_stack_a
 
 - [X] 	operation_swap
@@ -20,12 +24,19 @@ This project will make you sort data on a stack, with a limited set of instructi
 - [ ] 	algorithm_small
 - [ ] 	algorithm_medium
 - [ ] 	algorithm_large
+
+New naming for functions!!!!
+- [X] 	push_swap
+- [X] 	push_swap_init
+- [ ] 	push_swap_free
+- [ ] 	push_swap_error
+- [ ] 	push_swap_sort
 	
 - [ ]   Check readme
 
 ## Prerequisites
 
-(?) This project is for macOS.
+(?) This project is for Mac OS.
 
 ## Installation
 
@@ -40,7 +51,7 @@ This project will make you sort data on a stack, with a limited set of instructi
 
 ## Useful Links
 
-* [liksss](https://harm-smits.github.io/42docs/libs/minilibx)
+* [lik-name](https://link.example)
 
 
 ## Visualizer

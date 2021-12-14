@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/02 23:42:52 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/07 06:26:00 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME	= push_swap
 CC		= clang
 FLAGS	= -Wall -Wextra -Werror -g -fsanitize=address 
 OBJS	= $(patsubst %.c, %.o, $(SRCS))
-SRCS	=	error.c \
+SRCS	=	algorithm_small.c \
+			error.c \
 			operation_push.c \
 			operation_rev_rotate.c \
 			operation_rotate.c \

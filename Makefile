@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/15 12:42:41 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/15 18:34:11 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ CC		= clang
 FLAGS	= -Wall -Wextra -Werror -g -fsanitize=address 
 OBJS	= $(patsubst %.c, %.o, $(SRCS))
 SRCS	=	algorithm_small.c \
+			algorithm_big.c \
 			error.c \
 			operation_push.c \
 			operation_rev_rotate.c \

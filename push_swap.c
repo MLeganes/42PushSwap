@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:36:24 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 12:46:15 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/15 18:29:14 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void push_swap(t_push_swap *ps)
 	if (ps->size_a < 6)
 	{
 		stack_print(ps->stack_a, ps->size_a);
-		algorithm_small(ps);
+			algorithm_small(ps);
 		stack_print(ps->stack_a, ps->size_a);
 		stack_print(ps->stack_b, ps->size_b);
 	}

@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 15:47:21 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/15 20:27:40 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct s_stack
 {
 	int				id;
 	int				nbr;
+	int				rel;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
@@ -51,7 +52,9 @@ typedef struct s_push_swap
 	int		size_b;
 	char	**input_array;
 	int		array_size;
-	int		array_start;	
+	int		array_start;
+	int		chunk;
+	bool	swap;
 }	t_push_swap;
 
 /* ************************************************************************** */
@@ -61,7 +64,8 @@ typedef struct s_push_swap
 /*
  * ALGORITHM
  */
-void algorithm_small(t_push_swap *ps);
+void	algorithm_small(t_push_swap *ps);
+void	algorithm_big(t_push_swap *ps);
 
 /*
  * PUSH SWAP INIT
@@ -115,6 +119,8 @@ void		stack_print(t_stack *tsk, int size);
 bool		stack_issorted(t_push_swap *ps);
 int			stack_biggest(t_stack *stk, int size);
 int			stack_smallest(t_stack *stk);
+bool		stack_a_ismin(t_push_swap *ps, int nbr, int conv);
+bool		stack_a_ismax(t_push_swap *ps, int nbr);
 /*
  * PRINT OPERATION
  */

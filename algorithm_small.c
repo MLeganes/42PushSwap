@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:04:46 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 11:59:42 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/15 18:30:59 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,10 @@ void	algorithm_small(t_push_swap *ps)
 		while (ps->size_a > 3)
 			operation_pb(ps);
 		sort_3(ps);
+		while (ps->size_b)
+		{
+			// to do
+		}
 		return ;
 	}
 }

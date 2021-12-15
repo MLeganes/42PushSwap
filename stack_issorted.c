@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_limits.c                                     :+:      :+:    :+:   */
+/*   stack_issorted.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/14 11:56:56 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 15:47:07 by amorcill         ###   ########.fr       */
+/*   Created: 2021/12/15 12:05:34 by amorcill          #+#    #+#             */
+/*   Updated: 2021/12/15 13:43:30 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int stack_biggest(t_stack *stk, int size)
+bool	stack_issorted(t_push_swap *ps)
 {
-	//find biggest number
-	t_stack *temp;
-	t_stack *biggest;
-	int i;
+	int		i;
+	t_stack	*temp;
 
-	i = 0;
-	temp = stk;
-	biggest = stk;
-	while (i < size)
-	{
-		if (temp->nbr > temp->next->nbr)
-			biggest = temp;
-		temp = temp->next;
-		i++;		
+	if (ps->stack_b == NULL)
+	{		
+		if (ps->size_a == 1)
+			return (true);
+		i = 1;
+		temp = ps->stack_a;
+		while (i < ps->size_a)
+		{
+			if (temp->nbr < temp->next->nbr)
+			{
+				temp = temp->next;
+				i++;
+			}
+			else
+				return (false);
+		}		
 	}
-	return 0;
-}
-
-int stack_smallest(t_stack *stk)
-{
-	// find smallest
-
-	return 0;
+	return (true);
 }

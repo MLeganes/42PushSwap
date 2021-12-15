@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/07 06:31:11 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/15 15:47:21 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,9 @@ void		stack_b_add_first(t_push_swap *ps, t_stack *new);
 t_stack		*stack_b_remove_first(t_push_swap *ps);
 
 void		stack_print(t_stack *tsk, int size);
-
+bool		stack_issorted(t_push_swap *ps);
+int			stack_biggest(t_stack *stk, int size);
+int			stack_smallest(t_stack *stk);
 /*
  * PRINT OPERATION
  */

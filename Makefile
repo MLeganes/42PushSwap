@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/07 06:26:00 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/15 12:42:41 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,9 @@ SRCS	=	algorithm_small.c \
 			stack_remove_first.c \
 			print_operation.c \
 			stack_print.c \
+			stack_issorted.c \
+			#stack_limits.c \
+			
  
 %.o: %.c
 	$(CC) $(FLAGS) -Ilibft -c $< -o $@

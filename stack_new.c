@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 15:11:55 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 19:07:41 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/16 11:02:34 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ t_stack	*stack_new(int nbr)
 	data->nbr = nbr;
 	data->next = NULL;
 	data->prev = NULL;
-	data->id = 0;
 	data->rel = 0;
 	return (data);
 }

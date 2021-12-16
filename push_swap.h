@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 21:50:06 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/16 11:01:45 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@
 
 typedef struct s_stack
 {
-	int				id;
 	int				nbr;
 	int				rel;
 	struct s_stack	*next;
@@ -116,9 +115,9 @@ void		stack_b_add_first(t_push_swap *ps, t_stack *new);
 t_stack		*stack_b_remove_first(t_push_swap *ps);
 
 void		stack_print(t_stack *tsk, int size);
+//int			stack_biggest(t_stack *stk, int size);
+//int			stack_smallest(t_stack *stk);
 bool		stack_issorted(t_push_swap *ps);
-int			stack_biggest(t_stack *stk, int size);
-int			stack_smallest(t_stack *stk);
 bool		stack_a_ismin(t_push_swap *ps, int nbr, int conv);
 bool		stack_a_ismax(t_push_swap *ps, int nbr);
 /*

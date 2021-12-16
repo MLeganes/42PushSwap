@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 12:05:34 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 18:50:19 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/16 11:30:41 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ bool	stack_a_ismin(t_push_swap *ps, int nbr, int conv)
 	tmp = ps->stack_a;
 	while (i < ps->size_a)
 	{
-		if (conv && tmp->nbr < nbr && !tmp->id)
+		if (conv && tmp->nbr < nbr && tmp->rel == 0)
 			return (false);
 		if (!conv && tmp->nbr < nbr)
 			return (false);

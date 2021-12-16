@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:36:24 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 22:09:07 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:38:37 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ static void push_swap(t_push_swap *ps)
 	// 	algorithm_medium(ps);
 	else
 	{
-		while (!stack_issorted(ps))
-			algorithm_large(ps);
+		stack_print(ps->stack_a, ps->size_a);
+		algorithm_large(ps);
+		stack_print(ps->stack_a, ps->size_a);
+		stack_print(ps->stack_b, ps->size_b);
 	}
 	return ;
 }

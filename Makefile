@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/15 21:49:38 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/16 11:00:20 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,6 @@ SRCS	=	algorithm_small.c \
 			print_operation.c \
 			stack_print.c \
 			stack_issorted.c \
-			#stack_limits.c \
 			
  
 %.o: %.c

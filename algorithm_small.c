@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:04:46 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 18:30:59 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:31:54 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ void	algorithm_small(t_push_swap *ps)
 		while (ps->size_b)
 		{
 			// to do
+			// check if a is with 2 less.
+			
 		}
 		return ;
 	}

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algorithm_big.c                                    :+:      :+:    :+:   */
+/*   algorithm_large.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 18:31:32 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 20:52:30 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/15 21:49:29 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,7 +147,7 @@ static void algorithm_pushinorder(t_push_swap *ps)
 	}	
 }
 
-void	algorithm_big(t_push_swap *ps)
+void	algorithm_large(t_push_swap *ps)
 {
 	algorithm_chunkcalculator(ps);
 	algorithm_normalization(ps);

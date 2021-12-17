@@ -5,8 +5,7 @@ This project will make you sort data on a stack, with a limited set of instructi
 ## To do list
   
 - [ ] 	SEGV when the input is "2"
-- [ ] 	problems with input 0
-  
+- [ ] 	problems with input 0  
 - [ ] 	stack_delete
 
 - [ ] 	algorithm_small

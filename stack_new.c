@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 15:11:55 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/16 11:02:34 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/17 19:55:14 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_stack	*stack_new(int nbr)
 
 	data = malloc(sizeof(t_stack));
 	if (data == NULL)
-		error_print_exit("No memory for t_data!");
+		error_print_exit();
 	data->nbr = nbr;
 	data->next = NULL;
 	data->prev = NULL;

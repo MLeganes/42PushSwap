@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/17 19:32:49 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/17 19:56:35 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,14 @@ FLAGS	= -Wall -Wextra -Werror -g -fsanitize=address
 OBJS	= $(patsubst %.c, %.o, $(SRCS))
 SRCS	=	algorithm_small.c \
 			algorithm_large.c \
-			error.c \
 			operation_push.c \
 			operation_rev_rotate.c \
 			operation_rotate.c \
 			operation_swap.c \
 			push_swap.c \
-			push_swap_init.c \
+			push_swap_error.c \
 			push_swap_free.c \
+			push_swap_init.c \
 			stack_add_first.c \
 			stack_add_last.c \
 			stack_check_duplication.c \

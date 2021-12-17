@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/17 19:33:40 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/17 19:54:34 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,6 @@ void		print_operation(char *s);
 /*
  * ERROR
  */
-void		error_print_exit(char *error_msg);
+void		error_print_exit(void);
 
 #endif

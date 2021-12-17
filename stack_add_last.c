@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 15:08:16 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/17 16:30:03 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/17 19:54:43 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	stack_a_add_last(t_push_swap *ps, t_stack *new)
 	t_stack *prev;
 	
 	if (!new)
-		error_print_exit("Element is NULL, nothing to insert instack.");
+		error_print_exit();
 	if (ps->stack_a == NULL)
 	{
 		ps->stack_a = new;

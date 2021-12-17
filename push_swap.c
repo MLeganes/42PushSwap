@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:36:24 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/17 18:23:16 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/17 19:43:54 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int	main(int argc, char **argv)
 	ps = push_swap_init();
 	get_argv(ps, argc, argv);
 	push_swap(ps);
+	push_swap_free(ps);
 	system ("leaks push_swap");
 	// free everything!!!
 	return (0);

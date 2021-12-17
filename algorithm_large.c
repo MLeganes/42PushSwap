@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 18:31:32 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/17 18:06:14 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/17 19:48:38 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,7 +143,8 @@ static void algorithm_pushinorder(t_push_swap *ps)
 			ps->swap = false;
 			i--;
 		}
-	}	
+	}
+	return ;
 }
 
 void	algorithm_large(t_push_swap *ps)
@@ -151,4 +152,5 @@ void	algorithm_large(t_push_swap *ps)
 	algorithm_normalization(ps);	
 	algorithm_createchuncks(ps);
 	algorithm_pushinorder(ps);
+	return ;
 }

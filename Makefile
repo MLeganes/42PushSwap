@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/16 11:00:20 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/17 19:32:49 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS	=	algorithm_small.c \
 			operation_swap.c \
 			push_swap.c \
 			push_swap_init.c \
+			push_swap_free.c \
 			stack_add_first.c \
 			stack_add_last.c \
 			stack_check_duplication.c \

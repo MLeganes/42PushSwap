@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/16 11:01:45 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/17 19:33:40 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,12 @@ void	algorithm_small(t_push_swap *ps);
 void	algorithm_large(t_push_swap *ps);
 
 /*
- * PUSH SWAP INIT
+ * PUSH SWAP 
  */
 t_push_swap	*push_swap_init(void);
 void		get_argv(t_push_swap *ps, int argc, char **argv);
 void		ps_strtoarray(t_push_swap *ps, char *str);
+void		push_swap_free(t_push_swap *ps);
 
 /*
  * OPERATION PUSH

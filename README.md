@@ -7,23 +7,10 @@ This project will make you sort data on a stack, with a limited set of instructi
 - [ ] 	SEGV when the input is "2"
 - [ ] 	problems with input 0
   
-- [ ] 	stack_min
-- [ ] 	stack_max
-- [ ] 	stack_issorted
 - [ ] 	stack_delete
-- [X] 	stack_new
-- [X] 	stack_add
-- [X] 	stack_init
-- [X] 	create_stack_a
-
-- [X] 	operation_swap
-- [X] 	operation_rotate
-- [x] 	operation_rev_rotate
-- [x] 	operation_push
 
 - [ ] 	algorithm_small
-- [ ] 	algorithm_medium
-- [ ] 	algorithm_large
+- [x] 	algorithm_large
 
 New naming for functions!!!!
 - [X] 	push_swap

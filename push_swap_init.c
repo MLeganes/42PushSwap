@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:22:04 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/17 19:54:26 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/18 17:14:06 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ t_push_swap	*push_swap_init(void)
 {
 	t_push_swap	*ps;
 
+	ps = NULL;
 	ps = malloc(sizeof(t_push_swap));
 	if (ps == NULL)
 		error_print_exit();

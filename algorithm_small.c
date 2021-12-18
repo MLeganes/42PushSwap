@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:04:46 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/16 15:31:54 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/18 17:25:38 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,30 +39,48 @@ static void	sort_3(t_push_swap *ps)
 		operation_rra(ps);
 }
 
+static void algorithm_push_b_min(t_push_swap *ps)
+{
+	int smallest;
+	t_stack *tmp;
+
+	smallest = stack_smallest(ps->stack_a, ps->size_a);
+	printf(" \n Smallest number is %d\n", smallest);
+	
+	tmp = ps->stack_a;
+	
+	while (1)
+	{
+		if (tmp->nbr == smallest)
+		{
+			operation_pb(ps);
+			break ;
+		}
+		tmp = tmp->next;
+		operation_ra(ps);
+	}
+}
+
+static void sort_small(t_push_swap *ps)
+{
+	while (ps->size_a > 3)
+	{
+		algorithm_push_b_min(ps);		
+	}
+	sort_3(ps);
+	while (ps->size_b > 0)
+		operation_pa(ps);
+}
+
 void	algorithm_small(t_push_swap *ps)
 {
 	if (ps->size_a == 2)
 	{
 		if (ps->stack_a->nbr > ps->stack_a->next->nbr)
 			operation_sa(ps);
-		return ;
 	}
 	else if (ps->size_a == 3)
-	{
 		sort_3(ps);
-		return ;
-	}
 	else
-	{
-		while (ps->size_a > 3)
-			operation_pb(ps);
-		sort_3(ps);
-		while (ps->size_b)
-		{
-			// to do
-			// check if a is with 2 less.
-			
-		}
-		return ;
-	}
+		sort_small(ps);
 }

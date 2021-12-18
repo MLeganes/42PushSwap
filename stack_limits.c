@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 11:56:56 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/15 15:47:07 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/18 14:25:14 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int stack_biggest(t_stack *stk, int size)
 {
-	//find biggest number
 	t_stack *temp;
 	t_stack *biggest;
 	int i;
@@ -24,17 +23,29 @@ int stack_biggest(t_stack *stk, int size)
 	biggest = stk;
 	while (i < size)
 	{
-		if (temp->nbr > temp->next->nbr)
+		if (biggest->nbr < temp->nbr)
 			biggest = temp;
 		temp = temp->next;
 		i++;		
 	}
-	return 0;
+	return (biggest->nbr);
 }
 
-int stack_smallest(t_stack *stk)
+int stack_smallest(t_stack *stk, int size)
 {
-	// find smallest
+	t_stack *temp;
+	t_stack *smallest;
+	int i;
 
-	return 0;
+	i = 0;
+	temp = stk;
+	smallest = stk;
+	while (i < size)
+	{
+		if (smallest->nbr > temp->nbr)
+			smallest = temp;
+		temp = temp->next;
+		i++;		
+	}
+	return (smallest->nbr);
 }

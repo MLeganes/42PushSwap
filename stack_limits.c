@@ -6,17 +6,17 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 11:56:56 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/18 14:25:14 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/19 23:01:59 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int stack_biggest(t_stack *stk, int size)
+int	stack_biggest(t_stack *stk, int size)
 {
-	t_stack *temp;
-	t_stack *biggest;
-	int i;
+	t_stack	*temp;
+	t_stack	*biggest;
+	int		i;
 
 	i = 0;
 	temp = stk;
@@ -26,16 +26,16 @@ int stack_biggest(t_stack *stk, int size)
 		if (biggest->nbr < temp->nbr)
 			biggest = temp;
 		temp = temp->next;
-		i++;		
+		i++;
 	}
 	return (biggest->nbr);
 }
 
-int stack_smallest(t_stack *stk, int size)
+int	stack_smallest(t_stack *stk, int size)
 {
-	t_stack *temp;
-	t_stack *smallest;
-	int i;
+	t_stack	*temp;
+	t_stack	*smallest;
+	int		i;
 
 	i = 0;
 	temp = stk;
@@ -45,7 +45,7 @@ int stack_smallest(t_stack *stk, int size)
 		if (smallest->nbr > temp->nbr)
 			smallest = temp;
 		temp = temp->next;
-		i++;		
+		i++;
 	}
 	return (smallest->nbr);
 }

@@ -6,15 +6,15 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:31:21 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/18 17:24:43 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/19 22:24:29 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void push_swap_free(t_push_swap *ps)
+void	push_swap_free(t_push_swap *ps)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	while (ps->size_a > 0)
 	{
@@ -32,7 +32,6 @@ void push_swap_free(t_push_swap *ps)
 			free(tmp);
 		ps->size_b--;
 	}
-	
 	if (ps != NULL)
 		free(ps);
 }

@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 12:41:07 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/17 18:20:36 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/19 22:27:19 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	stack_a_add_first(t_push_swap *ps, t_stack *new)
 	{		
 		new->next = new;
 		new->prev = new;
-		ps->stack_a = new;		
+		ps->stack_a = new;
 	}
-	else 
-	{			
+	else
+	{
 		new->next = ps->stack_a;
 		new->prev = ps->stack_a->prev;
 		ps->stack_a->prev->next = new;
@@ -40,14 +40,14 @@ void	stack_b_add_first(t_push_swap *ps, t_stack *new)
 	{	
 		new->next = new;
 		new->prev = new;
-		ps->stack_b = new;		
+		ps->stack_b = new;
 	}
-	else 
+	else
 	{			
 		new->next = ps->stack_b;
 		new->prev = ps->stack_b->prev;
 		ps->stack_b->prev->next = new;
 		ps->stack_b->prev = new;
-		ps->stack_b = new;		
-	}	
+		ps->stack_b = new;
+	}
 }

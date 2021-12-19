@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 10:23:12 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/17 18:15:57 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/19 23:03:32 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 t_stack	*stack_a_remove_first(t_push_swap *ps)
 {
 	t_stack	*ret;
-	
+
 	if (ps->stack_a == NULL)
-		return NULL;
+		return (NULL);
 	ret = ps->stack_a;
 	if (ps->stack_a == ps->stack_a->next)
 	{
@@ -35,9 +35,9 @@ t_stack	*stack_a_remove_first(t_push_swap *ps)
 t_stack	*stack_b_remove_first(t_push_swap *ps)
 {
 	t_stack	*ret;
-	
+
 	if (ps->stack_b == NULL)
-		return NULL;
+		return (NULL);
 	ret = ps->stack_b;
 	if (ps->stack_b == ps->stack_b->next)
 	{

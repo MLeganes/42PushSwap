@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 23:38:25 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/13 10:09:25 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/19 23:02:32 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	stack_print(t_stack *tsk, int size)
 {
 	int	i;
 
-	//ft_printf("\n");
 	i = 0;
 	while (i < size)
 	{

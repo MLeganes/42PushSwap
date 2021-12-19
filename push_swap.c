@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:36:24 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/18 17:17:18 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/18 17:37:43 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,11 @@ static void push_swap(t_push_swap *ps)
 		return ;	
 	if (ps->size_a < 7)
 	{
-		stack_print(ps->stack_a, ps->size_a);
-			algorithm_small(ps);
-		stack_print(ps->stack_a, ps->size_a);
-		stack_print(ps->stack_b, ps->size_b);
+		algorithm_small(ps);		
 	}	
 	else
 	{
-		stack_print(ps->stack_a, ps->size_a);
 		algorithm_large(ps);
-		stack_print(ps->stack_a, ps->size_a);
-		stack_print(ps->stack_b, ps->size_b);
 	}
 	return ;
 }
@@ -42,6 +36,5 @@ int	main(int argc, char **argv)
 	push_swap(ps);
 	push_swap_free(ps);
 	system ("leaks push_swap");
-	// free everything!!!
 	return (0);
 }

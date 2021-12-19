@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:04:46 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/18 17:25:38 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/18 17:38:03 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ static void algorithm_push_b_min(t_push_swap *ps)
 	t_stack *tmp;
 
 	smallest = stack_smallest(ps->stack_a, ps->size_a);
-	printf(" \n Smallest number is %d\n", smallest);
-	
 	tmp = ps->stack_a;
 	
 	while (1)

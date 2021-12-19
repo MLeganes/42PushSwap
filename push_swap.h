@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/18 15:17:57 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/19 17:25:52 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ typedef struct s_push_swap
  */
 void	algorithm_small(t_push_swap *ps);
 void	algorithm_large(t_push_swap *ps);
+void	algorithm_normalization(t_push_swap *ps);
+void	algorithm_createchuncks(t_push_swap *ps);
 
 /*
  * PUSH SWAP 

@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:04:46 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/18 17:38:03 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/19 17:18:29 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,13 @@ static void	sort_3(t_push_swap *ps)
 		operation_rra(ps);
 }
 
-static void algorithm_push_b_min(t_push_swap *ps)
+static void	algorithm_push_b_min(t_push_swap *ps)
 {
-	int smallest;
-	t_stack *tmp;
+	int		smallest;
+	t_stack	*tmp;
 
 	smallest = stack_smallest(ps->stack_a, ps->size_a);
 	tmp = ps->stack_a;
-	
 	while (1)
 	{
 		if (tmp->nbr == smallest)
@@ -59,11 +58,11 @@ static void algorithm_push_b_min(t_push_swap *ps)
 	}
 }
 
-static void sort_small(t_push_swap *ps)
+static void	sort_small(t_push_swap *ps)
 {
 	while (ps->size_a > 3)
 	{
-		algorithm_push_b_min(ps);		
+		algorithm_push_b_min(ps);
 	}
 	sort_3(ps);
 	while (ps->size_b > 0)

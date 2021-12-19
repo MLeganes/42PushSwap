@@ -6,17 +6,17 @@ This project will make you sort data on a stack, with a limited set of instructi
   
 - [ ] 	SEGV when the input is "2"
 - [ ] 	problems with input 0  
-- [ ] 	stack_delete
+- [X] 	stack_delete
 
-- [ ] 	algorithm_small
+- [X] 	algorithm_small
 - [x] 	algorithm_large
 
 New naming for functions!!!!
 - [X] 	push_swap
 - [X] 	push_swap_init
-- [ ] 	push_swap_free
-- [ ] 	push_swap_error
-- [ ] 	push_swap_sort
+- [X] 	push_swap_free
+- [X] 	push_swap_error
+
 	
 - [ ]   Check readme
 

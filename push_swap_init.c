@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:22:04 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/18 17:14:06 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/21 09:08:54 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ t_push_swap	*push_swap_init(void)
 	ps->size_b = 0;
 	ps->input_array = NULL;
 	ps->array_size = 0;
-	ps->array_start = 0;
 	ps->chunk = 0;
 	ps->swap = false;
 	return (ps);
@@ -39,14 +38,12 @@ void	get_argv(t_push_swap *ps, int args, char **argv)
 	if (args == 2)
 	{
 		ps_strtoarray(ps, argv[1]);
-		ps->array_start = 0;
 		stack_a_create(ps);
 	}
 	else if (args > 2)
 	{
 		ps->array_size = args - 1;
 		ps->input_array = &argv[1];
-		ps->array_start = 1;
 		stack_a_create(ps);
 	}
 }

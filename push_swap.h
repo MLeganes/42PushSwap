@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/21 08:42:25 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/21 09:08:30 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ typedef struct s_push_swap
 	int		size_b;
 	char	**input_array;
 	int		array_size;
-	int		array_start;
 	int		chunk;
 	bool	swap;
 }	t_push_swap;

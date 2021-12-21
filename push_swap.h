@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/21 09:08:30 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/21 14:31:32 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include <errno.h>
 # include <sys/types.h>
 # include <sys/unistd.h>
+# define PRINT_HERE() (printf("file: %s, line: %d\n", __FILE__, __LINE__))
 
 /* ************************************************************************** */
 /* USER INCLUDES															  */

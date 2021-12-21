@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/19 17:25:52 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/21 08:42:25 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,6 @@ typedef struct s_push_swap
 /* ************************************************************************** */
 
 /*
- * ALGORITHM
- */
-void	algorithm_small(t_push_swap *ps);
-void	algorithm_large(t_push_swap *ps);
-void	algorithm_normalization(t_push_swap *ps);
-void	algorithm_createchuncks(t_push_swap *ps);
-
-/*
  * PUSH SWAP 
  */
 t_push_swap	*push_swap_init(void);
@@ -77,28 +69,28 @@ void		ps_strtoarray(t_push_swap *ps, char *str);
 void		push_swap_free(t_push_swap *ps);
 
 /*
- * OPERATION PUSH
+ * ALGORITHM
  */
-void		operation_pa(t_push_swap *ps); //Testes!
-void		operation_pb(t_push_swap *ps); //Testes!
+void		algorithm_small(t_push_swap *ps);
+void		algorithm_large(t_push_swap *ps);
+void		algorithm_normalization(t_push_swap *ps);
+void		algorithm_createchuncks(t_push_swap *ps);
 
 /*
- * OPERATION REV ROTATE
+ * OPERATIONS
  */
+// OPERATION PUSH
+void		operation_pa(t_push_swap *ps); //Testes!
+void		operation_pb(t_push_swap *ps); //Testes!
+// OPERATION REV ROTATE
 void		operation_rra(t_push_swap *ps); //Testes!
 void		operation_rrb(t_push_swap *ps); //Testes!
 void		operation_rrr(t_push_swap *ps); //Testes!
-
-/*
- * OPERATION ROTATE
- */
+// OPERATION ROTATE
 void		operation_ra(t_push_swap *ps); //Testes!
 void		operation_rb(t_push_swap *ps); //Testes!
 void		operation_rr(t_push_swap *ps); //Testes!
-
-/*
- * OPERATION SWAP
- */
+// OPERATION SWAP
 void		operation_sa(t_push_swap *ps); //Testes!
 void		operation_sb(t_push_swap *ps); //Testes!
 void		operation_ss(t_push_swap *ps); //Testes!
@@ -107,24 +99,22 @@ void		operation_ss(t_push_swap *ps); //Testes!
  * STACK OPERATION
  */
 t_stack		*stack_new(int nbr);
-
 void		stack_a_add_last(t_push_swap *ps, t_stack *elemnt);
 int			stack_a_check_duplication(t_push_swap *ps, t_stack *new_elemnt);
 void		stack_a_create(t_push_swap *ps);
 void		stack_a_add_first(t_push_swap *ps, t_stack *new);
 t_stack		*stack_a_remove_first(t_push_swap *ps);
-
+bool		stack_a_ismin(t_push_swap *ps, int nbr, int conv);
+bool		stack_a_ismax(t_push_swap *ps, int nbr);
 void		stack_b_add_first(t_push_swap *ps, t_stack *new);
 t_stack		*stack_b_remove_first(t_push_swap *ps);
-
 void		stack_print(t_stack *tsk, int size);
 int			stack_biggest(t_stack *stk, int size);
 int			stack_smallest(t_stack *stk, int size);
 bool		stack_issorted(t_push_swap *ps);
-bool		stack_a_ismin(t_push_swap *ps, int nbr, int conv);
-bool		stack_a_ismax(t_push_swap *ps, int nbr);
+
 /*
- * PRINT OPERATION
+ * PRINT
  */
 void		print_operation(char *s);
 

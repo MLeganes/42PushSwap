@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:22:04 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/21 09:08:54 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/21 12:58:27 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ void	get_argv(t_push_swap *ps, int args, char **argv)
 		error_print_exit();
 	if (args == 2)
 	{
+		if (ft_strlen(argv[1]) == 0)
+			error_print_exit();
+		if ( argv[1][0] == '\n')
+			error_print_exit();
 		ps_strtoarray(ps, argv[1]);
 		stack_a_create(ps);
 	}

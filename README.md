@@ -48,6 +48,19 @@ move <pyviz.py> to main folder
 	python3 pyviz.py `ruby -e "puts (-0..100).to_a.shuffle.join(' ')"`
 
 
+## Tester
+https://github.com/o-reo/push_swap_visualizer
+move <pyviz.py> to main folder
+
+	bash push_swap_tester/tester.sh . 0-10 5
+
+https://github.com/lmalki-h/push_swap_tester
+Rename checker_mac to checker
+move <genstack.pl> to main folder
+chmod 744 genstack.pl
+chmod 744 checker
+bash push_swap_tester/tester.sh . 0-10 5
+
 ## Sanitize (To test)
 
 Add -g in gcc command.

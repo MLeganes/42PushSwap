@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 18:31:32 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/19 17:24:41 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/21 16:55:45 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static int	algorithm_foundnext(t_push_swap *ps, int nbr)
 	return (0);
 }
 
+// Put number on top, calculate shortes dir.
 static void	stack_b_rotate(t_push_swap *ps, int pos, int nbr)
 {
 	int	dir;
@@ -46,6 +47,8 @@ static void	stack_b_rotate(t_push_swap *ps, int pos, int nbr)
 	}
 }
 
+// Find shortest way to rotate the stack.
+//static void	algorithm_shorteswaytorotate(t_push_swap *ps, int nbr)
 static void	algorithm_numbertotop(t_push_swap *ps, int nbr)
 {
 	t_stack	*tmp;
@@ -68,7 +71,8 @@ static void	algorithm_pushinorder(t_push_swap *ps)
 	int	i;
 
 	i = ps->size_b;
-	while (--i >= 0)
+	i--;
+	while (i >= 0)
 	{
 		algorithm_numbertotop(ps, i);
 		operation_pa(ps);
@@ -81,6 +85,7 @@ static void	algorithm_pushinorder(t_push_swap *ps)
 			ps->swap = false;
 			i--;
 		}
+		i--;
 	}
 	return ;
 }

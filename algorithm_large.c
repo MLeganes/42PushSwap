@@ -6,75 +6,11 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 18:31:32 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/22 10:28:04 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/22 12:27:40 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-
-
-// check func.
-/***
- *  Try tester without this aproch
- */
-// static int	algorithm_foundnext(t_push_swap *ps, int nbr)
-// {
-// 	if (ps->stack_b->nbr == nbr && !ps->swap)
-// 	{		
-// 		operation_pa(ps);
-// 		ps->swap = true;
-// 		return (1);
-// 	}
-// 	return (0);
-// }
-
-
-
-// old function.
-// Put number on top, calculate shortes dir.
-// static void	stack_b_rotate(t_push_swap *ps, int pos, int nbr)
-// {
-// 	int	dir;
-
-// 	dir = (pos > (ps->size_b / 2));
-// 	if (dir == 1)
-// 	{
-// 		while (ps->stack_b->nbr != nbr)
-// 		{
-// 			if (!algorithm_foundnext(ps, nbr - 1))
-// 				operation_rrb(ps);
-// 		}
-// 	}
-// 	else
-// 	{
-// 		while (ps->stack_b->nbr != nbr)
-// 		{
-// 			if (!algorithm_foundnext(ps, nbr - 1))
-// 				operation_rb(ps);
-// 		}
-// 	}
-// }
-
-// old funct.
-// static void	algorithm_numbertotop(t_push_swap *ps, int nbr)
-// {
-// 	t_stack	*tmp;
-// 	int		pos;
-
-// 	tmp = ps->stack_b;
-// 	pos = 0;
-// 	while (1)
-// 	{
-// 		if (tmp->nbr == nbr)
-// 			break ;
-// 		pos++;
-// 		tmp = tmp->next;
-// 	}
-// 	stack_b_rotate(ps, pos, nbr);
-// }
-
-
 
 /**
  *  New function.
@@ -100,6 +36,21 @@ static int	algorithm_shortesway2rotate(t_push_swap *ps, int nbr)
 	return (1);
 }
 
+// check func.
+/***
+ *  Try tester without this aproch
+ */
+// static int	algorithm_findnextnumber(t_push_swap *ps, int nbr)
+// {
+// 	if (ps->stack_b->nbr == nbr && !ps->swap)
+// 	{		
+// 		operation_pa(ps);
+// 		ps->swap = true;
+// 		return (1);
+// 	}
+// 	return (0);
+// }
+
 /**
  *  New function.
  *  Only put right nbr on top.
@@ -113,14 +64,27 @@ static void	algorithm_putnumbertop(t_push_swap *ps, int nbr)
 	{
 		while (ps->stack_b->nbr != nbr)
 		{
-			operation_rrb(ps);
+			// Example, I am looking for number 6 but If i see 5, I copy it after I copy 6 and swap!!!
+			if (ps->stack_b->nbr == (nbr - 1)  && ps->swap == false)
+			{
+				operation_pa(ps);
+				ps->swap = true;
+			}
+			else
+				operation_rrb(ps);
 		}
 	}
 	else
 	{
 		while (ps->stack_b->nbr != nbr)
 		{
-			operation_rb(ps);
+			if (ps->stack_b->nbr == (nbr - 1) && ps->swap == false)
+			{
+				operation_pa(ps);
+				ps->swap = true;
+			}
+			else
+				operation_rb(ps);
 		}
 	}
 }
@@ -139,20 +103,26 @@ static void	algorithm_pushinorder(t_push_swap *ps)
 		// No find next n - 1.
 
 		// if the right number is found, push A
-		operation_pa(ps);
+		if (ps->stack_b->nbr == i)
+		{
+			//PRINT_HERE();
+			operation_pa(ps);
+			i--;			
+		}
+	
+		
 
 		// Check this code.
 		// try without find-next-number in same code.
-		// if (ps->swap == true)
-		// {
-		// 	if (ps->size_b > 1 && ps->stack_b->nbr < ps->stack_b->next->nbr)
-		// 		operation_ss(ps);
-		// 	else
-		// 		operation_sa(ps);
-		// 	ps->swap = false;
-		// 	i--;
-		// }
-		i--;
+		if (ps->swap == true)
+		{
+			if (ps->size_b > 1 && ps->stack_b->nbr < ps->stack_b->next->nbr)
+				operation_ss(ps);
+			else
+				operation_sa(ps);
+			ps->swap = false;
+			i--;
+		}
 	}
 	return ;
 }

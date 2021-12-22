@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 01:18:35 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/03 01:25:14 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/22 12:26:28 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  */
 void	operation_rra(t_push_swap *ps)
 {
-	if (ps->stack_a && ps->size_a > 2)
+	if (ps->stack_a && ps->size_a > 1)
 	{
 		ps->stack_a = ps->stack_a->prev;
 		print_operation("rra");
@@ -35,7 +35,7 @@ void	operation_rra(t_push_swap *ps)
  */
 void	operation_rrb(t_push_swap *ps)
 {
-	if (ps->stack_b && ps->size_b > 2)
+	if (ps->stack_b && ps->size_b > 1)
 	{
 		ps->stack_b = ps->stack_b->prev;
 		print_operation("rrb");

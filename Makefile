@@ -6,7 +6,7 @@
 #    By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/27 11:24:29 by amorcill          #+#    #+#              #
-#    Updated: 2021/12/19 17:26:13 by amorcill         ###   ########.fr        #
+#    Updated: 2021/12/22 13:17:04 by amorcill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FLAGS	= -Wall -Wextra -Werror -g -fsanitize=address
 OBJS	= $(patsubst %.c, %.o, $(SRCS))
 SRCS	=	algorithm_small.c \
 			algorithm_large.c \
-			algorithm_large_utils.c \
+			algorithm_utils.c \
 			operation_push.c \
 			operation_rev_rotate.c \
 			operation_rotate.c \

@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:04:46 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/19 17:18:29 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/22 13:40:19 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,25 @@ static void	algorithm_push_b_min(t_push_swap *ps)
 {
 	int		smallest;
 	t_stack	*tmp;
+	int		dir;
+	int		i;
 
 	smallest = stack_smallest(ps->stack_a, ps->size_a);
+	dir = algorithm_a_shortesway2rotate(ps, smallest);
 	tmp = ps->stack_a;
-	while (1)
+	i = 0;
+	while (i < ps->size_a)
 	{
-		if (tmp->nbr == smallest)
+		if (ps->stack_a->nbr == smallest)
 		{
 			operation_pb(ps);
 			break ;
-		}
-		tmp = tmp->next;
-		operation_ra(ps);
+		}		
+		else if (dir == 1)
+			operation_rra(ps);
+		else
+			operation_ra(ps);
+		i++;
 	}
 }
 

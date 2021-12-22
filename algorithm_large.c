@@ -6,36 +6,17 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 18:31:32 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/22 13:07:13 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/22 13:32:38 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	algorithm_shortesway2rotate(t_push_swap *ps, int nbr)
-{
-	t_stack	*tmp;
-	int		pos;
-
-	tmp = ps->stack_b;
-	pos = 0;
-	while (pos < ps->size_b)
-	{
-		if (tmp->nbr == nbr)
-		{
-			return (pos > (ps->size_b / 2));
-		}
-		pos++;
-		tmp = tmp->next;
-	}
-	return (1);
-}
-
 static void	algorithm_putnumbertop(t_push_swap *ps, int nbr)
 {
 	int	dir;
 
-	dir = algorithm_shortesway2rotate(ps, nbr);
+	dir = algorithm_b_shortesway2rotate(ps, nbr);
 	while (ps->stack_b->nbr != nbr)
 	{
 		if (ps->stack_b->nbr == (nbr - 1) && ps->swap == false)

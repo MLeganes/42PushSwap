@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/22 13:12:33 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/22 13:32:58 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ void		algorithm_small(t_push_swap *ps);
 void		algorithm_large(t_push_swap *ps);
 void		algorithm_normalization(t_push_swap *ps);
 void		algorithm_createchuncks(t_push_swap *ps);
+int			algorithm_a_shortesway2rotate(t_push_swap *ps, int nbr);
+int			algorithm_b_shortesway2rotate(t_push_swap *ps, int nbr);
 
 /*
  * OPERATIONS

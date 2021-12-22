@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:22:04 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/22 13:07:54 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/22 14:18:45 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ t_push_swap	*push_swap_init(void)
 
 void	get_argv(t_push_swap *ps, int args, char **argv)
 {
+	
 	if (args < 2)
-		error_print_exit();
+		exit (0);
 	if (args == 2)
 	{
 		if (ft_strlen(argv[1]) == 0)

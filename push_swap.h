@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/21 14:31:32 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/22 13:12:33 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 # include <errno.h>
 # include <sys/types.h>
 # include <sys/unistd.h>
-# define PRINT_HERE() (printf("file: %s, line: %d\n", __FILE__, __LINE__))
 
 /* ************************************************************************** */
 /* USER INCLUDES															  */
@@ -80,20 +79,20 @@ void		algorithm_createchuncks(t_push_swap *ps);
  * OPERATIONS
  */
 // OPERATION PUSH
-void		operation_pa(t_push_swap *ps); //Testes!
-void		operation_pb(t_push_swap *ps); //Testes!
+void		operation_pa(t_push_swap *ps);
+void		operation_pb(t_push_swap *ps);
 // OPERATION REV ROTATE
-void		operation_rra(t_push_swap *ps); //Testes!
-void		operation_rrb(t_push_swap *ps); //Testes!
-void		operation_rrr(t_push_swap *ps); //Testes!
+void		operation_rra(t_push_swap *ps);
+void		operation_rrb(t_push_swap *ps);
+void		operation_rrr(t_push_swap *ps);
 // OPERATION ROTATE
-void		operation_ra(t_push_swap *ps); //Testes!
-void		operation_rb(t_push_swap *ps); //Testes!
-void		operation_rr(t_push_swap *ps); //Testes!
+void		operation_ra(t_push_swap *ps);
+void		operation_rb(t_push_swap *ps);
+void		operation_rr(t_push_swap *ps);
 // OPERATION SWAP
-void		operation_sa(t_push_swap *ps); //Testes!
-void		operation_sb(t_push_swap *ps); //Testes!
-void		operation_ss(t_push_swap *ps); //Testes!
+void		operation_sa(t_push_swap *ps);
+void		operation_sb(t_push_swap *ps);
+void		operation_ss(t_push_swap *ps);
 
 /*
  * STACK OPERATION

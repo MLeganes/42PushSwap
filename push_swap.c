@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:36:24 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/19 23:12:19 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/22 13:04:06 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	push_swap(t_push_swap *ps)
 {
 	if (stack_issorted(ps))
 		return ;
-	if (ps->size_a < 7)
+	if (ps->size_a <= 5)
 		algorithm_small(ps);
 	else
 		algorithm_large(ps);

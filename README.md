@@ -49,8 +49,6 @@ move <pyviz.py> to main folder
 
 
 ## Tester
-https://github.com/o-reo/push_swap_visualizer
-move <pyviz.py> to main folder
 
 	bash push_swap_tester/tester.sh . 0-10 5
 
@@ -69,3 +67,9 @@ Add -g in gcc command.
 	-fsanitize=address
 
 * [sanitize](https://github.com/google/sanitizers/wiki/AddressSanitizerLeakSanitizer)
+
+## Others
+
+Printing tracks:
+
+	# define PRINT_HERE() (printf("file: %s, line: %d\n", __FILE__, __LINE__))

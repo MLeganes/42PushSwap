@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:31:21 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/19 22:24:29 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/23 13:47:48 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,28 @@ void	push_swap_free(t_push_swap *ps)
 
 	while (ps->size_a > 0)
 	{
-		tmp = ps->stack_a;
-		ps->stack_a = ps->stack_a->next;
+		tmp = stack_a_remove_first(ps);
 		if (tmp != NULL)
+		{
 			free(tmp);
+			tmp = NULL;
+		}
 		ps->size_a--;
-	}
-	while (ps->size_b > 0)
+	}	
+	while (ps->size_b > 1)
 	{
-		tmp = ps->stack_b;
-		ps->stack_b = ps->stack_b->next;
+		tmp = stack_b_remove_first(ps);
 		if (tmp != NULL)
+		{
 			free(tmp);
+			tmp = NULL;
+		}
 		ps->size_b--;
-	}
+	}	
 	if (ps != NULL)
+	{
+		free (ps->input_array);
 		free(ps);
+		ps = NULL;
+	}
 }

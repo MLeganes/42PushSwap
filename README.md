@@ -8,7 +8,7 @@ Number of approaches in movements
 - 3n: Between 2 and 3 movements
 - 5n: Between 7 and 12 movements
 - 100n: Between 500 and 700 movements
-- 500n: Between 5100 and 5500 movements 
+- ./500n: Between 5100 and 5500 movements 
 
 ![Push_swap](gifs/push_swap.gif)
 

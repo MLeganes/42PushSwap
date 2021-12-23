@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:36:24 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/22 13:04:06 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/23 12:17:09 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int	main(int argc, char **argv)
 	get_argv(ps, argc, argv);
 	push_swap(ps);
 	push_swap_free(ps);
+	system("leaks push_swap");
 	return (0);
 }

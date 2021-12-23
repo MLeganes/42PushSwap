@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 13:26:36 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/22 13:32:58 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/22 16:14:00 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@
 /* ************************************************************************** */
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdint.h>
 # include <stdbool.h>
+
+// NO used in the project.
+# include <stdint.h>
 # include <errno.h>
 # include <sys/types.h>
 # include <sys/unistd.h>

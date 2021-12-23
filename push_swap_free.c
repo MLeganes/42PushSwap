@@ -6,7 +6,7 @@
 /*   By: amorcill <amorcill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 19:31:21 by amorcill          #+#    #+#             */
-/*   Updated: 2021/12/23 13:47:48 by amorcill         ###   ########.fr       */
+/*   Updated: 2021/12/23 14:01:13 by amorcill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	push_swap_free(t_push_swap *ps)
 		}
 		ps->size_a--;
 	}	
-	while (ps->size_b > 1)
+	while (ps->size_b > 0)
 	{
 		tmp = stack_b_remove_first(ps);
 		if (tmp != NULL)
